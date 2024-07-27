@@ -2,7 +2,7 @@
 #!/usr/bin/python3
 """
 starts a flask web application
-i
+
 """
 
 from flask import Flask
@@ -17,4 +17,7 @@ def home():
 return 'Hello HBNB'
 
 if ...name... == '...main...':
-	app.route(host='0.0.0.0', port=5000)
+        app.route(host='0.0.0.0', port=5000)
+~
+~
+
