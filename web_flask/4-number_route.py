@@ -30,15 +30,23 @@ def c_with_params(text):
     text_no_underscore = text.replace('_', ' ')
     return "c ()".format(text_no_underscore)
 
-@app.route('/python/text', strict_slashes=False, defaults={'text': 'is_cool'})
+@app.route('/python/<text>', strict_slashes=False, defaults={'text': 'is_cool'})
 def python_with_params(text):
-  """
-  Display 'python' followed by the value of <text>.
-  """
-  text_no_underscore = text.replace('_', ' ')
-  return "python {}".format(text_no_underscore)
+    """
+    Display 'python' followed by the value of <text>.
+    """
+    text_no_underscore = text.replace('_', ' ')
+    return "python {}".format(text_no_underscore)
+
+@app.route('/number/<int:n>', strict_slashes=False)
+def number(n):
+    """
+
+    """
+    return "{} is a number".format(n)
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
-
 
