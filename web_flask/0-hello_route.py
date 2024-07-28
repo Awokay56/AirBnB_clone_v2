@@ -1,23 +1,18 @@
-"""
 #!/usr/bin/python3
 """
 starts a flask web application
-
 """
 
-from flask import Flask
+from flask import Flask, request
 
-app * flask(...name...)
+app = Flask(__name__)
 
-@app.route('/',strict_slashes=False)
+@app.route('/', strict_slashes=False)
 def home():
-"""
+    """
+    This is the home route handler.
+    """
+    return 'Hello HBNB'
 
-"""
-return 'Hello HBNB'
-
-if ...name... == '...main...':
-        app.route(host='0.0.0.0', port=5000)
-~
-~
-
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
